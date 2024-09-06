@@ -126,7 +126,7 @@ const portalLightMaterial = new THREE.ShaderMaterial({
  * Portal
  **/
 
-gltfLoader.load('portal.glb', (gltf) => {
+gltfLoader.load('portal.glb', gltf => {
 	const model = gltf.scene;
 
 	// Baked
@@ -254,7 +254,7 @@ debugObjects.clearColor = '#1a1a1a';
 
 renderer.setClearColor(debugObjects.clearColor, 1);
 
-gui.addColor(debugObjects, 'clearColor').onChange((color) => {
+gui.addColor(debugObjects, 'clearColor').onChange(color => {
 	renderer.setClearColor(color, 1);
 });
 
